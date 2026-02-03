@@ -2,11 +2,12 @@ import { Component, input } from '@angular/core';
 import { Project } from '../project';
 
 @Component({
-    selector: 'project-icon',
-    templateUrl: './project-icon.html',
-    styleUrl: './project-icon.scss'
+    selector: 'project-page',
+    templateUrl: './project-page.html',
+    styleUrl: './project-page.scss'
 })
 
-export class ProjectIcon {
+
+export class ProjectPage {
     project = input.required<Project>();
 }

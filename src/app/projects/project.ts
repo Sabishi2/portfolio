@@ -1,4 +1,4 @@
-interface ProjectI {
+export type Project = {
     name: string;
     imageURL: string;
     longDescription: string;
@@ -7,8 +7,3 @@ interface ProjectI {
     linkToProject: string;
 }
 
-export class Project {
-    constructor(def: ProjectI) {
-        Object.assign(this, def);
-    }
-}
