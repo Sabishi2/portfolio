@@ -1,0 +1,42 @@
+img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    object-fit: cover;
+}
+
+.text {
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+    position: absolute;
+    color: white;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+}
+
+.project-icon {
+    position: relative;
+    border: 1px solid #000;
+    width: 300px;
+    height: 200px;
+}
+
+.name-title {
+    text-decoration: underline;
+}
+
+.project-icon:hover {
+    .text {
+        display: block;
+    }
+
+    cursor:pointer;
+}
