@@ -1,7 +1,9 @@
 import { Component, input } from '@angular/core';
-import { Project } from '../project';
+import { ProjectT } from '../project-type';
+import { CarouselHolderModule } from '../../carousel/carousel-holder-module';
 
 @Component({
+    imports: [CarouselHolderModule],
     selector: 'project-page',
     templateUrl: './project-page.html',
     styleUrl: './project-page.scss'
@@ -9,5 +11,6 @@ import { Project } from '../project';
 
 
 export class ProjectPage {
-    project = input.required<Project>();
+    project = input.required<ProjectT>();
+    index = input.required<number>();
 }

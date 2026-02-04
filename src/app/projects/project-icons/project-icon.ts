@@ -1,5 +1,5 @@
 import { Component, input } from '@angular/core';
-import { Project } from '../project';
+import { ProjectT } from '../project-type';
 
 @Component({
     selector: 'project-icon',
@@ -8,5 +8,5 @@ import { Project } from '../project';
 })
 
 export class ProjectIcon {
-    project = input.required<Project>();
+    project = input.required<ProjectT>();
 }
