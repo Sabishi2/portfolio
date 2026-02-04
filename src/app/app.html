@@ -230,10 +230,11 @@
       </div>
     </div>
     <div class="projects-container">
-      <pi-carousel-holder-component [projects]=projects></pi-carousel-holder-component>
-      <div class="carousel">
-        <!--<project-icon [project]="project1"></project-icon>-->
-      </div>
+      <pi-carousel-holder-component [projects]=projects
+        (clickedItem)="itemClicked($event)"></pi-carousel-holder-component>
+      @for (project of projects; track project.id) {
+      <project-page [project]=project [class]="{'display-none': project.id!=highlightedProject}"></project-page>
+      }
     </div>
   </div>
 </main>

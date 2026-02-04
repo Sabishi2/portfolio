@@ -54,11 +54,18 @@ const projects: Array<ProjectT> = [p1, p2, p3, p4, p5];
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, ProjectIcon, ProjectPage, RouterModule, PICarouselHolderModule],
+  imports: [RouterOutlet, ProjectPage, RouterModule, PICarouselHolderModule],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
 export class App {
+  itemClicked = (idToHighlight: number) => {
+    this.highlightedProject = idToHighlight;
+  }
+  highlightCallback = (projectId: number) => {
+    this.highlightedProject = projectId;
+  }
+  highlightedProject = 1;
   protected readonly title = signal('Portfolio-site');
   projects = projects;
 }

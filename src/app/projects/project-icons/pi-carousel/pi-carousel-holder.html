@@ -2,7 +2,9 @@
     <owl-carousel-o [options]="customOptions">
         @for (curProject of projects(); track curProject.id) {
         <ng-template carouselSlide [id]=curProject.id.toString()>
-            <project-icon [project]=curProject></project-icon>
+            <project-icon [project]=curProject (click)="hoverAndClickHandler(curProject.id, true)"
+                (mouseenter)="hoverAndClickHandler(curProject.id, false)" (mouseleave)="hoverAndClickHandler(-1, false)"
+                [class]="{'darkened': curProject.id!=highlightedItem1 && curProject.id!=highlightedItem2}"></project-icon>
         </ng-template>
         }
     </owl-carousel-o>

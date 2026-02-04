@@ -12,5 +12,4 @@ import { PPCarouselHolderModule } from './pp-carousel/pp-carousel-holder-module'
 
 export class ProjectPage {
     project = input.required<ProjectT>();
-    index = input.required<number>();
 }
