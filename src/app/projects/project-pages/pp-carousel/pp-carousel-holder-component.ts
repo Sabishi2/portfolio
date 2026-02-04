@@ -3,13 +3,13 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 
 @Component({
     standalone: false,
-    selector: 'carousel-holder-component',
-    templateUrl: './carousel-holder.html',
-    styleUrl: './carousel-holder.scss'
+    selector: 'pp-carousel-holder-component',
+    templateUrl: './pp-carousel-holder.html',
+    styleUrl: './pp-carousel-holder.scss'
 })
 
 
-export class CarouselHolderComponent {
+export class PPCarouselHolderComponent {
     customOptions: OwlOptions = {
         loop: true,
         items: 1,

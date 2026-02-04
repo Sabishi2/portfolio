@@ -1,4 +1,5 @@
 export type ProjectT = {
+    id: number,
     name: string;
     imageURL: string;
     screenshotFolder?: string;

@@ -1,0 +1,9 @@
+<div class="carousel-container">
+    <owl-carousel-o [options]="customOptions">
+        @for (curProject of projects(); track curProject.id) {
+        <ng-template carouselSlide [id]=curProject.id.toString()>
+            <project-icon [project]=curProject></project-icon>
+        </ng-template>
+        }
+    </owl-carousel-o>
+</div>

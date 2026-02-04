@@ -1,9 +1,9 @@
 import { Component, input } from '@angular/core';
 import { ProjectT } from '../project-type';
-import { CarouselHolderModule } from '../../carousel/carousel-holder-module';
+import { PPCarouselHolderModule } from './pp-carousel/pp-carousel-holder-module';
 
 @Component({
-    imports: [CarouselHolderModule],
+    imports: [PPCarouselHolderModule],
     selector: 'project-page',
     templateUrl: './project-page.html',
     styleUrl: './project-page.scss'
