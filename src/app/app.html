@@ -89,10 +89,6 @@
     margin-top: 1.5rem;
   }
 
-  .flex-row {
-    display: flex;
-    flex-direction: row;
-  }
 
   .divider {
     width: 1px;
@@ -233,8 +229,12 @@
         </div>
       </div>
     </div>
-    <project-icon [name]="project.name" [shortDescription]="project.shortDescription"
-      [imageURL]="project.imageUrl"></project-icon>
+    <div class="projects-container">
+      <div class="carousel">
+        <project-icon [project]="project1"></project-icon>
+      </div>
+      <project-page [project]="project1" [index]=1></project-page>
+    </div>
   </div>
 </main>
 
