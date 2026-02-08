@@ -3,4 +3,4 @@
 A portfolio page, showcasing projects I've created and other info. 
 
 # Angular
-This project was made using [Angular CLI](https://github.com/angular/angular-cli)
+This project was made using [Angular](https://angular.dev/)
