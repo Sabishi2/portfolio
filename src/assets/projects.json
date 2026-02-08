@@ -1,0 +1,49 @@
+{
+    "projects": [
+        {
+            "id": 1,
+            "name": "Ao Onidle",
+            "shortDescription": "Ao Oni guessing game website",
+            "longDescription": "Longer description",
+            "imageURL": "logo_real.png",
+            "public": true,
+            "linkToProject": "#"
+        },
+        {
+            "id": 2,
+            "name": "bileet",
+            "shortDescription": "Ao Oni guessing game website",
+            "longDescription": "Longer description",
+            "imageURL": "Ao_Onidle/1.png",
+            "public": true,
+            "linkToProject": "#"
+        },
+        {
+            "id": 3,
+            "name": "XD",
+            "shortDescription": "Ao Oni guessing game website",
+            "longDescription": "Longer description",
+            "imageURL": "logo_real.png",
+            "public": true,
+            "linkToProject": "#"
+        },
+        {
+            "id": 4,
+            "name": "Joo",
+            "shortDescription": "Ao Oni guessing game website",
+            "longDescription": "Longer description",
+            "imageURL": "logo_real.png",
+            "public": true,
+            "linkToProject": "#"
+        },
+        {
+            "id": 5,
+            "name": "Juu",
+            "shortDescription": "Ao Oni guessing game website",
+            "longDescription": "Longer description",
+            "imageURL": "Ao_Onidle/1.png",
+            "public": true,
+            "linkToProject": "#"
+        }
+    ]
+}
