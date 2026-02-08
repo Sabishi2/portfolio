@@ -3,11 +3,21 @@
         {
             "id": 1,
             "name": "Ao Onidle",
-            "shortDescription": "Ao Oni guessing game website",
-            "longDescription": "Longer description",
             "imageURL": "logo_real.png",
+            "screenshotFolder": "Ao_Onidle",
+            "longDescription": "Longer description",
+            "shortDescription": "Ao Oni guessing game website",
             "public": true,
-            "linkToProject": "#"
+            "linkToProject": "https://sabishi2.github.io/AO_ONIDLE",
+            "linkText": "Play the game [here]",
+            "alternateLinkToProject": "https://github.com/Sabishi2/AO_ONIDLE",
+            "alternateLinkText": "Check out the [GitHub repository]",
+            "technologiesUsed": [
+                "Svelte",
+                "Vite",
+                "JS",
+                "HTML+CSS"
+            ]
         },
         {
             "id": 2,

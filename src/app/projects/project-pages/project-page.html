@@ -1,10 +1,22 @@
+@if(project().public) {
 <div class="project-page" id="project-page-{{project().id}}">
     <h1>{{project().name}}</h1>
-    @if (project().screenshotFolder !== "undefined") {
+    @if (!isUndefined(project().technologiesUsed)) {
+    <span class="techonologies-used">{{project().technologiesUsed?.join(", ")}}</span>
+    }
+    @if (!isUndefined(project().screenshotFolder)) {
     <pp-carousel-holder-component></pp-carousel-holder-component>
     }
     <p>{{project().longDescription}}</p>
-    @if (project().screenshotFolder !== "undefined") {
-    <span></span>
+
+    <p class="link-to-project"
+        [innerHTML]="parseLinkText(project().linkText??'See the project [here]', project().linkToProject)">
+    </p>
+
+    @if(!isUndefined(project().alternateLinkToProject)) {
+    <p class="link-to-project"
+        [innerHTML]="parseLinkText(project().alternateLinkText??'See the project [here]', project().alternateLinkToProject??'')">
+    </p>
     }
 </div>
+}
