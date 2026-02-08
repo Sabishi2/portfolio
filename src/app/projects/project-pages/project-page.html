@@ -1,6 +1,6 @@
 @if(project().public) {
 <div class="project-page" id="project-page-{{project().id}}">
-    <h1>{{project().name}}</h1>
+    <h1 style="margin-bottom: 0;">{{project().name}}</h1>
     @if (!isUndefined(project().technologiesUsed)) {
     <span class="techonologies-used">{{project().technologiesUsed?.join(", ")}}</span>
     }
@@ -18,5 +18,13 @@
         [innerHTML]="parseLinkText(project().alternateLinkText??'See the project [here]', project().alternateLinkToProject??'')">
     </p>
     }
+
+    @if(!isUndefined(project().demoYouTubeLink)) {
+    <iframe width="560" height="315" [src]="sanitizedURLs.get(project().id)" title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    }
+
 </div>
 }

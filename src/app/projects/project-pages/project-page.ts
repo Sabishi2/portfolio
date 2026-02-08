@@ -1,7 +1,7 @@
 import { Component, input } from '@angular/core';
 import { ProjectT } from '../project-type';
 import { PPCarouselHolderModule } from './pp-carousel/pp-carousel-holder-module';
-
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
     imports: [PPCarouselHolderModule],
@@ -16,6 +16,7 @@ export class ProjectPage {
     isUndefined(param1: any) {
         return param1 === undefined;
     }
+
     parseLinkText(linkText: string, linkToProject: string) {
         // (?:[^.\\][\[]) -> Match '[' character that is not preceded with '\'
         // (?:[^.\\][\]]) -> Match ']' character that is not preceded with '\'
@@ -41,7 +42,23 @@ export class ProjectPage {
         // and any char except escape char + escape char '(not \)\'
         fullText = fullText.replaceAll(/(?<!(?:[^\\][\\])+(?:[\\]{2})*)\\/gm, "");
         return fullText
-
     }
+
+    sanitizeURL(url: string) {
+        return this.sanitizer.bypassSecurityTrustResourceUrl(url);
+    }
+
+    constructor(private sanitizer: DomSanitizer) { }
+
+    sanitizedURLs: Map<number, SafeResourceUrl> = new Map();
+
+
+
     project = input.required<ProjectT>();
+    ngOnInit() {
+        const sanitizedUrl = this.sanitizeURL(this.project().demoYouTubeLink ?? '')
+        this.sanitizedURLs.set(this.project().id,
+            sanitizedUrl
+        )
+    }
 }
