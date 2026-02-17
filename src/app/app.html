@@ -65,6 +65,20 @@
     margin-block: 1.5rem;
   }
 
+  .divide-screen {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .divide-screen>.left-side {
+    width: 45%;
+  }
+
+  .divide-screen>.right-side {
+    width: 45%;
+  }
+
   .social-links {
     display: flex;
     align-items: center;
@@ -94,17 +108,25 @@
       margin-block: 1.5rem;
     }
 
+    .divide-screen {
+      flex-direction: column;
+    }
+
   }
 </style>
 
 <main class="main">
   <div class="content">
-    <div class="flex-row">
+    <div class="divide-screen">
       <div class="left-side">
         <h1>Eetu Hyytiäinen</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, culpa provident necessitatibus neque nisi,
           fuga ratione dolorem doloribus, numquam fugit atque. Repudiandae neque consectetur blanditiis dolorem,
           repellendus autem perspiciatis quasi?</p>
+      </div>
+      <div class="divider-vertical" role="separator" aria-label="Divider"></div>
+      <div class="right-side">
+        <p>näätsä mikä näätä</p>
       </div>
     </div>
     <div class="divider-horizontal" role="separator" aria-label="Divider"></div>
