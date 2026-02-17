@@ -1,5 +1,6 @@
 import { Component, signal } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
+import { input, computed } from '@angular/core';
 
 @Component({
     standalone: false,
@@ -10,6 +11,19 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 
 
 export class PPCarouselHolderComponent {
+
+    createSlidesStore() {
+        let slideStoreTemp = [];
+        for (let i = 0; i < this.screenshotFilenames().length; i++) {
+            slideStoreTemp.push({
+                id: `slide-${i + 1}`, src: `${this.screenshotFolder()}${this.screenshotFilenames()[i]}`
+            })
+        }
+        console.log(this.screenshotFilenames());
+        console.log("yeh: " + slideStoreTemp);
+        return slideStoreTemp;
+    }
+
     customOptions: OwlOptions = {
         loop: true,
         items: 1,
@@ -24,8 +38,12 @@ export class PPCarouselHolderComponent {
         navText: ['', ''],
         nav: true
     }
-    slidesStore = signal<any[]>([
-        { id: 'slide-1', src: "Ao_Onidle/1.png" },
-        { id: 'slide-2', src: "Ao_Onidle/2.png" },
-    ]);
+    screenshotFolder = input.required<string>();
+    screenshotFilenames = input.required<Array<string>>();
+
+    slidesStore = signal<any[]>([{ id: 'slide1' }]);
+    ngOnInit() {
+        this.slidesStore = signal<any[]>(this.createSlidesStore());
+    }
+
 }

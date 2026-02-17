@@ -5,6 +5,10 @@
             "name": "Ao Onidle",
             "imageURL": "Ao_Onidle/logo.png",
             "screenshotFolder": "Ao_Onidle/screenshots/",
+            "screenshotFilenames": [
+                "1.png",
+                "2.png"
+            ],
             "longDescription": "Longer description",
             "shortDescription": "Ao Oni guessing game website",
             "public": true,
@@ -22,13 +26,18 @@
         {
             "id": 2,
             "name": "One Above All",
-            "shortDescription": "Bossfight game made on Unity",
+            "imageURL": "One_Above_All/logo.png",
             "screenshotFolder": "One_Above_All/screenshots",
             "longDescription": "Longer description",
-            "imageURL": "",
-            "public": false,
-            "linkToProject": "#",
-            "demoYoutubeLink": "https://youtu.be/KZ4a7MErYLg"
+            "shortDescription": "Bossfight game made on Unity",
+            "public": true,
+            "linkToProject": "OAA.zip",
+            "linkText": "Download the game [here]",
+            "demoYouTubeLink": "https://youtu.be/KZ4a7MErYLg",
+            "technologiesUsed": [
+                "Unity",
+                "C#"
+            ]
         }
     ]
 }

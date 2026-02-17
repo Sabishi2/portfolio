@@ -5,7 +5,8 @@
     <span class="techonologies-used">{{project().technologiesUsed?.join(", ")}}</span>
     }
     @if (!isUndefined(project().screenshotFolder)) {
-    <pp-carousel-holder-component></pp-carousel-holder-component>
+    <pp-carousel-holder-component [screenshotFolder]="project().screenshotFolder??''"
+        [screenshotFilenames]="project().screenshotFilenames??[]"></pp-carousel-holder-component>
     }
     <p>{{project().longDescription}}</p>
 
