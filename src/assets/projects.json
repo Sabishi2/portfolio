@@ -3,8 +3,8 @@
         {
             "id": 1,
             "name": "Ao Onidle",
-            "imageURL": "logo_real.png",
-            "screenshotFolder": "Ao_Onidle",
+            "imageURL": "Ao_Onidle/logo.png",
+            "screenshotFolder": "Ao_Onidle/screenshots/",
             "longDescription": "Longer description",
             "shortDescription": "Ao Oni guessing game website",
             "public": true,
@@ -21,12 +21,14 @@
         },
         {
             "id": 2,
-            "name": "bileet",
-            "shortDescription": "Ao Oni guessing game website",
+            "name": "One Above All",
+            "shortDescription": "Bossfight game made on Unity",
+            "screenshotFolder": "One_Above_All/screenshots",
             "longDescription": "Longer description",
-            "imageURL": "Ao_Onidle/1.png",
+            "imageURL": "",
             "public": false,
-            "linkToProject": "#"
+            "linkToProject": "#",
+            "demoYoutubeLink": "https://youtu.be/KZ4a7MErYLg"
         }
     ]
 }
