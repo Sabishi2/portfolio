@@ -46,7 +46,8 @@ export class PICarouselHolderComponent {
         autoplaySpeed: 700,
         autoplay: false,
         navText: ['', ''],
-        nav: true
+        nav: true,
+        autoWidth: true
     }
     slidesStore = signal<any[]>([
         { id: 'slide-1', src: "logo_real.png" },
