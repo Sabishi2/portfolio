@@ -1,145 +1,24 @@
 <style>
-  :host {
-    --bright-blue: oklch(51.01% 0.274 263.83);
-    --electric-violet: oklch(53.18% 0.28 296.97);
-    --french-violet: oklch(47.66% 0.246 305.88);
-    --vivid-pink: oklch(69.02% 0.277 332.77);
-    --hot-red: oklch(61.42% 0.238 15.34);
-    --orange-red: oklch(63.32% 0.24 31.68);
 
-    --gray-900: oklch(19.37% 0.006 300.98);
-    --gray-700: oklch(36.98% 0.014 302.71);
-    --gray-400: oklch(70.9% 0.015 304.04);
-
-    --red-to-pink-to-purple-vertical-gradient: linear-gradient(180deg,
-        var(--orange-red) 0%,
-        var(--vivid-pink) 50%,
-        var(--electric-violet) 100%);
-
-    --red-to-pink-to-purple-horizontal-gradient: linear-gradient(90deg,
-        var(--orange-red) 0%,
-        var(--vivid-pink) 50%,
-        var(--electric-violet) 100%);
-
-    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-      "Segoe UI Symbol";
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-
-  main {
-    width: 100%;
-    min-height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-    box-sizing: inherit;
-    position: relative;
-  }
-
-  .content {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 100%;
-    max-width: 1280px;
-    margin-bottom: 3rem;
-  }
-
-
-
-
-  .divider-vertical {
-    width: 1px;
-    background: var(--red-to-pink-to-purple-vertical-gradient);
-    margin-inline: 0.5rem;
-  }
-
-  .divider-horizontal {
-    height: 1px;
-    width: 100%;
-    background: var(--red-to-pink-to-purple-horizontal-gradient);
-    margin-block: 1.5rem;
-  }
-
-  .divide-screen {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .divide-screen>.left-side {
-    width: 45%;
-  }
-
-  .divide-screen>.right-side {
-    width: 45%;
-  }
-
-  .social-links {
-    display: flex;
-    align-items: center;
-    gap: 0.73rem;
-    margin-top: 1.5rem;
-  }
-
-  .social-links path {
-    transition: fill 0.3s ease;
-    fill: var(--gray-400);
-  }
-
-  .social-links a:hover svg path {
-    fill: var(--gray-900);
-  }
-
-  @media screen and (max-width: 650px) {
-
-
-    .content {
-      flex-direction: column;
-      max-width: 100%;
-      width: max-content;
-    }
-
-    .divider-vertical {
-      height: 1px;
-      width: 100%;
-      background: var(--red-to-pink-to-purple-horizontal-gradient);
-      margin-block: 1.5rem;
-    }
-
-    .divide-screen {
-      flex-direction: column;
-
-      .left-side {
-        width: 100%;
-      }
-
-      .right-side {
-        width: 100%;
-      }
-    }
-  }
 </style>
 
 <main class="main">
   <div class="content">
-    <div class="divide-screen">
-      <div class="left-side">
-        <h1>Eetu Hyytiäinen</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, culpa provident necessitatibus neque nisi,
-          fuga ratione dolorem doloribus, numquam fugit atque. Repudiandae neque consectetur blanditiis dolorem,
-          repellendus autem perspiciatis quasi?</p>
-      </div>
-      <div class="divider-vertical" role="separator" aria-label="Divider"></div>
-      <div class="right-side">
-        <p>näätsä mikä näätä</p>
-      </div>
+    <h1>Eetu Hyytiäinen</h1>
+    <!--
+    <div class="social-links">
+      <a href="https://github.com/Sabishi2/">
+        <img src="github-svgrepo-com.svg" />
+      </a>
+      <a href="https://linkedin.com/in/eetu-hyytiainen">
+        <img src="linkedin-svgrepo-com.svg" />
+      </a>
     </div>
-    <div class="divider-horizontal" role="separator" aria-label="Divider"></div>
+    -->
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, culpa provident necessitatibus neque nisi,
+      fuga ratione dolorem doloribus, numquam fugit atque. Repudiandae neque consectetur blanditiis dolorem,
+      repellendus autem perspiciatis quasi?</p>
+    <div class="divider-horizontal shiny" role="separator" aria-label="Divider"></div>
     <div class="Selectable">
 
     </div>

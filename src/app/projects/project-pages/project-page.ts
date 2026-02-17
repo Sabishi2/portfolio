@@ -32,7 +32,6 @@ export class ProjectPage {
             const fullTextStart: string = linkText.substring(0, linkStart);
             let fullTextMiddle: string = linkText.substring(linkStart + 1, linkEnd); // Omit the '[' and ']'
             const fullTextEnd: string = linkText.substring(linkEnd + 1);
-            console.log(fullTextEnd);
             fullTextMiddle = `<a href="${linkToProject}">${fullTextMiddle}</a>`
             fullText = fullTextStart + fullTextMiddle + fullTextEnd;
         }

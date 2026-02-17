@@ -17,18 +17,13 @@ export class PICarouselHolderComponent {
         this.clickedItem.emit(idToHighlight)
     }
     hoverAndClickHandler = (idToHighlight: number, click: boolean) => {
-        if (click)
-            if (this.highlightedItem1 == idToHighlight) {
-                this.itemClicked(-1);
-                this.highlightedItem1 = -1;
-            }
-
-            else {
-                this.itemClicked(idToHighlight);
-                this.highlightedItem1 = idToHighlight;
-            }
-        else
+        if (click) {
+            this.itemClicked(idToHighlight);
+            this.highlightedItem1 = idToHighlight;
+        }
+        else {
             this.highlightedItem2 = idToHighlight;
+        }
     }
     clickedItem = output<number>();
     highlightedItem1 = -1;

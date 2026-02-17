@@ -1,6 +1,5 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet, RouterModule } from '@angular/router';
-import { ProjectIcon } from './projects/project-icons/project-icon';
 import { ProjectT } from './projects/project-type';
 import { ProjectPage } from './projects/project-pages/project-page';
 import { PICarouselHolderModule } from './projects/project-icons/pi-carousel/pi-carousel-holder-module';
