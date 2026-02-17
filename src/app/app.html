@@ -96,8 +96,11 @@
   }
 
   @media screen and (max-width: 650px) {
+
+
     .content {
       flex-direction: column;
+      max-width: 100%;
       width: max-content;
     }
 
@@ -110,8 +113,15 @@
 
     .divide-screen {
       flex-direction: column;
-    }
 
+      .left-side {
+        width: 100%;
+      }
+
+      .right-side {
+        width: 100%;
+      }
+    }
   }
 </style>
 

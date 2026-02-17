@@ -1,4 +1,8 @@
 .carousel-container {
-    width: 800px;
+    max-width: min(800px, 100%);
     max-height: 520px;
+}
+
+img {
+    max-width: 100%;
 }

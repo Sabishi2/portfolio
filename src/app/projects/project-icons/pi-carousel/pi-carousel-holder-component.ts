@@ -35,19 +35,29 @@ export class PICarouselHolderComponent {
     highlightedItem2 = -1;
     projects = input.required<Array<ProjectT>>()
     customOptions: OwlOptions = {
-        loop: false,
-        items: 4,
         mouseDrag: true,
         touchDrag: true,
-        center: false,
+        autoWidth: true,
         pullDrag: false,
-        dots: false,
+        margin: 4,
         navSpeed: 700,
-        autoplaySpeed: 700,
         autoplay: false,
         navText: ['', ''],
         nav: true,
-        autoWidth: true
+        responsive: {
+            0: {
+                items: 1,
+            },
+            640: {
+                items: 2
+            },
+            960: {
+                items: 3,
+            },
+            1200: {
+                items: 4
+            }
+        }
     }
     slidesStore = signal<any[]>([
         { id: 'slide-1', src: "logo_real.png" },

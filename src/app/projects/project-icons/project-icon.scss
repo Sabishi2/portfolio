@@ -1,3 +1,5 @@
+@use "sass:math";
+
 img {
     position: absolute;
     left: 0;
@@ -28,9 +30,9 @@ p {
 
 .project-icon {
     position: relative;
-    border: 1px solid #000;
-    width: 300px;
-    height: 200px;
+    width: min(450px, 100%);
+    padding-top: calc(min(450px, 100%) * (2/3));
+    height: 0;
 }
 
 .name-title {
