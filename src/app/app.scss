@@ -84,6 +84,27 @@ main {
     width: 45%;
 }
 
+.selectable {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-bottom: 1rem;
+    font-size: 24px;
+
+    span {
+        padding: 4px 24px;
+        border-radius: 48px;
+        color: white;
+        background-color: var(--gray-900);
+    }
+
+    span:hover {
+        cursor: pointer;
+        background-color: var(--gray-700);
+    }
+}
+
 .social-links {
     display: flex;
     flex-direction: row;
