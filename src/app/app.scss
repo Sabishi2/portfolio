@@ -84,26 +84,6 @@ main {
     width: 45%;
 }
 
-.selectable {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 4px;
-    margin-bottom: 1rem;
-    font-size: 24px;
-
-    span {
-        padding: 4px 24px;
-        border-radius: 48px;
-        color: white;
-        background-color: var(--gray-900);
-    }
-
-    span:hover {
-        cursor: pointer;
-        background-color: var(--gray-700);
-    }
-}
 
 .social-links {
     display: flex;
@@ -123,6 +103,53 @@ main {
     }
 }
 
+.section {
+    display: none;
+    transition: opacity .3s ease,
+        display .3s ease allow-discrete;
+
+    &.enabled {
+        display: block;
+        opacity: 1;
+    }
+
+}
+
+@starting-style {
+    .section.enabled {
+        opacity: 0;
+
+    }
+}
+
+
+// Do double of enable section
+@keyframes enable-section {
+    0% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+// Do half of enable section
+@keyframes disable-section {
+    0% {
+        opacity: 1;
+    }
+
+    99% {
+        opacity: 0;
+    }
+
+    100% {
+        display: none;
+    }
+}
 
 @media screen and (max-width: 650px) {
 

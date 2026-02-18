@@ -19,20 +19,40 @@
       fuga ratione dolorem doloribus, numquam fugit atque. Repudiandae neque consectetur blanditiis dolorem,
       repellendus autem perspiciatis quasi?</p>
     <div class="divider-horizontal shiny" role="separator" aria-label="Divider"></div>
-    <div class="selectable">
-      <span>Mutsis</span>
-      <span>aitis</span>
-      <span>hihi</span>
-      <span>joo</span>
-    </div>
-    <div class="projects-container">
+
+    <section-navigation>
+      @for (section of sectionsList; track section; let idx = $index;) {
+      <nav-button (click)="navigateClicked(idx)">{{section}}</nav-button>
+      }
+    </section-navigation>
+
+
+    <div class="projects-container section" [class]="getSectionClass(0)">
+
       <pi-carousel-holder-component [projects]=projects
-        (clickedItem)="itemClicked($event)"></pi-carousel-holder-component>
+        (clickedItem)="projectClicked($event)"></pi-carousel-holder-component>
+
       <div class="divider-horizontal" role="separator" aria-label="Divider"></div>
+
       @for (project of projects; track project.id) {
       <project-page [project]=project [class]="{'display-none': project.id!=highlightedProject}"></project-page>
       }
+
     </div>
+
+    <div class="projects-container section" [class]="getSectionClass(1)">
+
+      <pi-carousel-holder-component [projects]=projects
+        (clickedItem)="projectClicked($event)"></pi-carousel-holder-component>
+
+      <div class="divider-horizontal" role="separator" aria-label="Divider"></div>
+
+      @for (project of projects; track project.id) {
+      <project-page [project]=project [class]="{'display-none': project.id!=highlightedProject}"></project-page>
+      }
+
+    </div>
+
   </div>
 </main>
 

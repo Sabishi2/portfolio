@@ -26,7 +26,7 @@ export class PICarouselHolderComponent {
         }
     }
     clickedItem = output<number>();
-    highlightedItem1 = -1;
+    highlightedItem1 = 1;
     highlightedItem2 = -1;
     projects = input.required<Array<ProjectT>>()
     customOptions: OwlOptions = {
@@ -54,8 +54,6 @@ export class PICarouselHolderComponent {
             }
         }
     }
-    slidesStore = signal<any[]>([
-        { id: 'slide-1', src: "logo_real.png" },
-    ]);
+
 
 }

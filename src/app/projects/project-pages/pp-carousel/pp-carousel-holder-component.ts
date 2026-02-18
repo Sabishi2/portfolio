@@ -19,8 +19,6 @@ export class PPCarouselHolderComponent {
                 id: `slide-${i + 1}`, src: `${this.screenshotFolder()}${this.screenshotFilenames()[i]}`
             })
         }
-        console.log(this.screenshotFilenames());
-        console.log("yeh: " + slideStoreTemp);
         return slideStoreTemp;
     }
 
