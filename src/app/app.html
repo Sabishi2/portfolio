@@ -15,9 +15,9 @@
       </a>
     </div>
     -->
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, culpa provident necessitatibus neque nisi,
-      fuga ratione dolorem doloribus, numquam fugit atque. Repudiandae neque consectetur blanditiis dolorem,
-      repellendus autem perspiciatis quasi?</p>
+    <p>
+
+    </p>
     <div class="divider-horizontal shiny" role="separator" aria-label="Divider"></div>
 
     <section-navigation>
@@ -28,7 +28,7 @@
 
 
     <div class="projects-container section" [class]="getSectionClass(0)">
-
+      <h1 class="mb-1">Projects</h1>
       <pi-carousel-holder-component [projects]=projects
         (clickedItem)="projectClicked($event)"></pi-carousel-holder-component>
 
@@ -40,18 +40,7 @@
 
     </div>
 
-    <div class="projects-container section" [class]="getSectionClass(1)">
 
-      <pi-carousel-holder-component [projects]=projects
-        (clickedItem)="projectClicked($event)"></pi-carousel-holder-component>
-
-      <div class="divider-horizontal" role="separator" aria-label="Divider"></div>
-
-      @for (project of projects; track project.id) {
-      <project-page [project]=project [class]="{'display-none': project.id!=highlightedProject}"></project-page>
-      }
-
-    </div>
 
   </div>
 </main>
