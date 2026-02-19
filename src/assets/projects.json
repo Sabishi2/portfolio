@@ -27,7 +27,14 @@
             "id": 2,
             "name": "One Above All",
             "imageURL": "One_Above_All/logo.png",
-            "screenshotFolder": "One_Above_All/screenshots",
+            "screenshotFolder": "One_Above_All/screenshots/",
+            "screenshotFilenames": [
+                "1.png",
+                "2.png",
+                "3.png",
+                "4.png",
+                "5.png"
+            ],
             "longDescription": "Longer description",
             "shortDescription": "Bossfight game made on Unity",
             "public": true,
