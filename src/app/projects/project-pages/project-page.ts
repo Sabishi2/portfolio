@@ -48,8 +48,6 @@ export class ProjectPage {
 
     sanitizedURLs: Map<number, SafeResourceUrl> = new Map();
 
-
-
     project = input.required<ProjectT>();
 
 }
