@@ -1,4 +1,7 @@
 <div>
-
-    <recursive-component [nestedData]="generalParse(descriptionText())"></recursive-component>
+    @for(paragraph of descriptionText().split('\n'); track paragraph) {
+    <p>
+        <recursive-component [nestedData]="generalParse(paragraph)"></recursive-component>
+    </p>
+    }
 </div>
