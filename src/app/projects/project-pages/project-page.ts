@@ -2,9 +2,10 @@ import { Component, input } from '@angular/core';
 import { ProjectT } from '../project-type';
 import { PPCarouselHolderModule } from './pp-carousel/pp-carousel-holder-module';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { YouTubePlayer } from '@angular/youtube-player';
 
 @Component({
-    imports: [PPCarouselHolderModule],
+    imports: [PPCarouselHolderModule, YouTubePlayer],
     selector: 'project-page',
     templateUrl: './project-page.html',
     styleUrl: './project-page.scss'
@@ -43,10 +44,6 @@ export class ProjectPage {
         return fullText
     }
 
-    sanitizeURL(url: string) {
-        return this.sanitizer.bypassSecurityTrustResourceUrl(url);
-    }
-
     constructor(private sanitizer: DomSanitizer) { }
 
     sanitizedURLs: Map<number, SafeResourceUrl> = new Map();
@@ -54,10 +51,5 @@ export class ProjectPage {
 
 
     project = input.required<ProjectT>();
-    ngOnInit() {
-        const sanitizedUrl = this.sanitizeURL(this.project().demoYouTubeLink ?? '')
-        this.sanitizedURLs.set(this.project().id,
-            sanitizedUrl
-        )
-    }
+
 }

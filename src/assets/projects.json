@@ -33,7 +33,7 @@
             "public": true,
             "linkToProject": "OAA.zip",
             "linkText": "Download the game [here]",
-            "demoYouTubeLink": "https://youtu.be/KZ4a7MErYLg",
+            "demoYouTubeId": "KZ4a7MErYLg",
             "technologiesUsed": [
                 "Unity",
                 "C#"

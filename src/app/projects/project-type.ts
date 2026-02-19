@@ -15,7 +15,7 @@ export type ProjectT = {
     linkText?: string;
     alternateLinkToProject?: string;
     alternateLinkText?: string;
-    demoYouTubeLink?: string;
+    demoYouTubeId?: string;
     technologiesUsed?: Array<string>;
 }
 

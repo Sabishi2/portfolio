@@ -20,11 +20,9 @@
     </p>
     }
 
-    @if(!isUndefined(project().demoYouTubeLink)) {
-    <iframe width="560" height="315" [src]="sanitizedURLs.get(project().id)" title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    @if(!isUndefined(project().demoYouTubeId)) {
+    <youtube-player [videoId]="project().demoYouTubeId" loadApi="false"></youtube-player>
+
     }
 
 </div>
