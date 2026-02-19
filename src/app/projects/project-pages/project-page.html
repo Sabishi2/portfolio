@@ -8,7 +8,8 @@
     <pp-carousel-holder-component [screenshotFolder]="project().screenshotFolder??''"
         [screenshotFilenames]="project().screenshotFilenames??[]"></pp-carousel-holder-component>
     }
-    <p>{{project().longDescription}}</p>
+
+    <project-description [descriptionText]="project().longDescription"></project-description>
 
     <p class="link-to-project"
         [innerHTML]="parseLinkText(project().linkText??'See the project [here]', project().linkToProject)">

@@ -1,0 +1,23 @@
+@for(data of nestedData(); track data[0]) {
+@switch (data[0]) {
+@case ('italicStart') {
+<i>
+    <recursive-component [nestedData]="data[1]" />
+</i>
+}
+@case ('boldStart') {
+<b>
+    <recursive-component [nestedData]="data[1]" />
+</b>
+}
+@case ('linkStart') {
+<a [href]="data[1]">
+    <recursive-component [nestedData]="data[2]" />
+</a>
+}
+@default {
+{{data[1]}}
+}
+}
+
+}

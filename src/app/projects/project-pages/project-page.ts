@@ -1,11 +1,11 @@
 import { Component, input } from '@angular/core';
 import { ProjectT } from '../project-type';
 import { PPCarouselHolderModule } from './pp-carousel/pp-carousel-holder-module';
-import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { YouTubePlayer } from '@angular/youtube-player';
+import { ProjectDescription } from "./project-description/project-description";
 
 @Component({
-    imports: [PPCarouselHolderModule, YouTubePlayer],
+    imports: [PPCarouselHolderModule, YouTubePlayer, ProjectDescription],
     selector: 'project-page',
     templateUrl: './project-page.html',
     styleUrl: './project-page.scss'
@@ -17,6 +17,8 @@ export class ProjectPage {
     isUndefined(param1: any) {
         return param1 === undefined;
     }
+
+
 
     parseLinkText(linkText: string, linkToProject: string) {
         // (?:[^.\\][\[]) -> Match '[' character that is not preceded with '\'
@@ -43,10 +45,6 @@ export class ProjectPage {
         fullText = fullText.replaceAll(/(?<!(?:[^\\][\\])+(?:[\\]{2})*)\\/gm, "");
         return fullText
     }
-
-    constructor(private sanitizer: DomSanitizer) { }
-
-    sanitizedURLs: Map<number, SafeResourceUrl> = new Map();
 
     project = input.required<ProjectT>();
 
