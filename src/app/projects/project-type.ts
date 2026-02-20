@@ -7,7 +7,7 @@ export type ProjectT = {
     longDescription: string;
     shortDescription: string;
     public: boolean;
-    linkToProject: string;
+    linkToProject?: string;
     // for linkText wrap the section you want to hyperlink with square brackets: []  
     // Alternatively the link will be pasted in the end with [link]
     // To use square brackets in your text, use escape character: \

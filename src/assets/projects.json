@@ -2,6 +2,24 @@
     "projects": [
         {
             "id": 1,
+            "name": "Coordit",
+            "imageURL": "Coordit/logo.png",
+            "screenshotFolder": "Coordit/screenshots/",
+            "screenshotFilenames": [
+                "1.png",
+                "2.png"
+            ],
+            "longDescription": "Longer description \n Joo",
+            "shortDescription": "Phone application for scheduling of casual events",
+            "public": true,
+            "demoYouTubeId": "KZ4a7MErYLg",
+            "technologiesUsed": [
+                "Unity",
+                "C#"
+            ]
+        },
+        {
+            "id": 2,
             "name": "Ao Onidle",
             "imageURL": "Ao_Onidle/logo.png",
             "screenshotFolder": "Ao_Onidle/screenshots/",
@@ -24,7 +42,7 @@
             ]
         },
         {
-            "id": 2,
+            "id": 3,
             "name": "One Above All",
             "imageURL": "One_Above_All/logo.png",
             "screenshotFolder": "One_Above_All/screenshots/",
