@@ -25,10 +25,8 @@ export class PPCarouselHolderComponent {
     customOptions: OwlOptions = {
         loop: true,
         items: 1,
-        mouseDrag: true,
-        touchDrag: true,
-        center: true,
-        pullDrag: false,
+        autoWidth: true,
+        autoHeight: false,
         dots: false,
         navSpeed: 700,
         autoplaySpeed: 700,
@@ -36,12 +34,17 @@ export class PPCarouselHolderComponent {
         navText: ['', ''],
         nav: true
     }
+
     screenshotFolder = input.required<string>();
     screenshotFilenames = input.required<Array<string>>();
+    customOptionsInput = input<OwlOptions>();
 
     slidesStore = signal<any[]>([{ id: 'slide1' }]);
     ngOnInit() {
+
         this.slidesStore = signal<any[]>(this.createSlidesStore());
+        this.customOptions = { ...this.customOptions, ...this.customOptionsInput() }
+
     }
 
 }

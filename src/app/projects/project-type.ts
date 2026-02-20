@@ -1,3 +1,5 @@
+import { OwlOptions } from "ngx-owl-carousel-o";
+
 export type ProjectT = {
     id: number,
     name: string;
@@ -8,6 +10,7 @@ export type ProjectT = {
     shortDescription: string;
     public: boolean;
     linkToProject?: string;
+    carouselOptions?: OwlOptions;
     // for linkText wrap the section you want to hyperlink with square brackets: []  
     // Alternatively the link will be pasted in the end with [link]
     // To use square brackets in your text, use escape character: \

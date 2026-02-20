@@ -7,15 +7,22 @@
             "screenshotFolder": "Coordit/screenshots/",
             "screenshotFilenames": [
                 "1.png",
-                "2.png"
+                "2.png",
+                "3.png",
+                "4.png"
             ],
-            "longDescription": "Longer description \n Joo",
+            "longDescription": "*Coordit* is a mobile application created as a student project. I worked on this project as a lead developer along with 6 others. \n *Coordit's* purpose is to help small groups plan and schedule. Users can create groups, each group has their own group calendar. As people fill out slots on the group calendar by when they're free, the app finds the matches in free time between the group's users and highlights those slots. \n The app was developed using [https://reactnative.dev/](React Native) and built with [https://expo.dev/](Expo) along with [https://firebase.google.com/](Firebase) for server-side stuff. \n Below you can watch the demo video showcasing the app.",
             "shortDescription": "Phone application for scheduling of casual events",
             "public": true,
+            "carouselOptions": {
+                "items": 2
+            },
             "demoYouTubeId": "KZ4a7MErYLg",
             "technologiesUsed": [
-                "Unity",
-                "C#"
+                "Node.js",
+                "React-Native",
+                "Expo",
+                "Firebase"
             ]
         },
         {
@@ -53,7 +60,7 @@
                 "4.png",
                 "5.png"
             ],
-            "longDescription": "Longer description \n Joo",
+            "longDescription": "*One Above All* is a game where ninjas fight against the devil. \n The game was made as a school project on Unity, for some gameplay you can watch the demo video below.",
             "shortDescription": "Bossfight game made on Unity",
             "public": true,
             "linkToProject": "OAA.zip",

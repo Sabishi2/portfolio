@@ -5,15 +5,18 @@
     <span class="techonologies-used">{{project().technologiesUsed?.join(", ")}}</span>
     }
     @if (!isUndefined(project().screenshotFolder)) {
-    <pp-carousel-holder-component [screenshotFolder]="project().screenshotFolder??''"
+    <pp-carousel-holder-component [customOptionsInput]="project().carouselOptions"
+        [screenshotFolder]="project().screenshotFolder??''"
         [screenshotFilenames]="project().screenshotFilenames??[]"></pp-carousel-holder-component>
     }
 
     <project-description [descriptionText]="project().longDescription"></project-description>
 
+    @if(!isUndefined(project().linkText)) {
     <p class="link-to-project"
-        [innerHTML]="parseLinkText(project().linkText??'See the project [here]', project().linkToProject)">
+        [innerHTML]="parseLinkText(project().linkText??'See the project [here]', project().linkToProject??'')">
     </p>
+    }
 
     @if(!isUndefined(project().alternateLinkToProject)) {
     <p class="link-to-project"
