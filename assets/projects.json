@@ -2,6 +2,31 @@
     "projects": [
         {
             "id": 1,
+            "name": "Coordit",
+            "imageURL": "Coordit/logo.png",
+            "screenshotFolder": "Coordit/screenshots/",
+            "screenshotFilenames": [
+                "1.png",
+                "2.png",
+                "3.png",
+                "4.png"
+            ],
+            "longDescription": "*Coordit* is a mobile application created as a student project. I worked on this project as a lead developer along with 6 others. \n *Coordit's* purpose is to help small groups plan and schedule. Users can create groups, each group has their own group calendar. As people fill out slots on the group calendar by when they're free, the app finds the matches in free time between the group's users and highlights those slots. \n The app was developed using [https://reactnative.dev/](React Native) and built with [https://expo.dev/](Expo) along with [https://firebase.google.com/](Firebase) for server-side stuff like authentication and databases. \n Below you can watch the demo video showcasing the app.",
+            "shortDescription": "Phone application for scheduling of casual events",
+            "public": true,
+            "carouselOptions": {
+                "items": 2
+            },
+            "demoYouTubeId": "q5vWRL6UB_0",
+            "technologiesUsed": [
+                "Node.js",
+                "React-Native",
+                "Expo",
+                "Firebase"
+            ]
+        },
+        {
+            "id": 2,
             "name": "Ao Onidle",
             "imageURL": "Ao_Onidle/logo.png",
             "screenshotFolder": "Ao_Onidle/screenshots/",
@@ -9,7 +34,7 @@
                 "1.png",
                 "2.png"
             ],
-            "longDescription": "Longer description",
+            "longDescription": "To explain about *Ao Onidle*, I need to explain about the concept of DLE games and Ao Oni itself.\nAo Oni is a horror game developed by [https://mygames888.info/](noprops) in 2008. It got a cult following online both internationally and in japan.\nDLE games, the name probably coming from [https://www.nytimes.com/games/wordle/index.html](WORDLE) refer to games where a collection to guess from is given, in *Ao Onidle's* case, Ao Oni characters. When guessing from those collections colored tiles show up that give hints leading you towards future guesses.\nEnjoy *Ao Onidle!*",
             "shortDescription": "Ao Oni guessing game website",
             "public": true,
             "linkToProject": "https://sabishi2.github.io/AO_ONIDLE",
@@ -24,16 +49,23 @@
             ]
         },
         {
-            "id": 2,
+            "id": 3,
             "name": "One Above All",
             "imageURL": "One_Above_All/logo.png",
-            "screenshotFolder": "One_Above_All/screenshots",
-            "longDescription": "Longer description",
+            "screenshotFolder": "One_Above_All/screenshots/",
+            "screenshotFilenames": [
+                "1.png",
+                "2.png",
+                "3.png",
+                "4.png",
+                "5.png"
+            ],
+            "longDescription": "*One Above All* is a game where ninjas fight against the devil. \n The game was made as a school project on Unity, for some gameplay you can watch the demo video below.",
             "shortDescription": "Bossfight game made on Unity",
             "public": true,
             "linkToProject": "OAA.zip",
             "linkText": "Download the game [here]",
-            "demoYouTubeLink": "https://youtu.be/KZ4a7MErYLg",
+            "demoYouTubeId": "KZ4a7MErYLg",
             "technologiesUsed": [
                 "Unity",
                 "C#"
