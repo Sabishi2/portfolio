@@ -11,13 +11,12 @@
                 "3.png",
                 "4.png"
             ],
-            "longDescription": "*Coordit* is a mobile application created as a student project. I worked on this project as a lead developer along with 6 others. \n *Coordit's* purpose is to help small groups plan and schedule. Users can create groups, each group has their own group calendar. As people fill out slots on the group calendar by when they're free, the app finds the matches in free time between the group's users and highlights those slots. \n The app was developed using [https://reactnative.dev/](React Native) and built with [https://expo.dev/](Expo) along with [https://firebase.google.com/](Firebase) for server-side stuff. \n Below you can watch the demo video showcasing the app.",
+            "longDescription": "*Coordit* is a mobile application created as a student project. I worked on this project as a lead developer along with 6 others. \n *Coordit's* purpose is to help small groups plan and schedule. Users can create groups, each group has their own group calendar. As people fill out slots on the group calendar by when they're free, the app finds the matches in free time between the group's users and highlights those slots. \n The app was developed using [https://reactnative.dev/](React Native) and built with [https://expo.dev/](Expo) along with [https://firebase.google.com/](Firebase) for server-side stuff like authentication and databases. \n Below you can watch the demo video showcasing the app.",
             "shortDescription": "Phone application for scheduling of casual events",
             "public": true,
             "carouselOptions": {
                 "items": 2
             },
-            "demoYouTubeId": "KZ4a7MErYLg",
             "technologiesUsed": [
                 "Node.js",
                 "React-Native",

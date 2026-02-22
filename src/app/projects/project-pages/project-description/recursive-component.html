@@ -1,22 +1,22 @@
 @for(data of nestedData(); track data[0]) {
-@switch (data[0]) {
+@switch (data[1]) {
 @case ('italicStart') {
 <i>
-    <recursive-component [nestedData]="data[1]" />
+    <recursive-component [nestedData]="data[2]" />
 </i>
 }
 @case ('boldStart') {
 <b>
-    <recursive-component [nestedData]="data[1]" />
+    <recursive-component [nestedData]="data[2]" />
 </b>
 }
 @case ('linkStart') {
-<a [href]="data[1]">
-    <recursive-component [nestedData]="data[2]" />
+<a [href]="data[2]">
+    <recursive-component [nestedData]="data[3]" />
 </a>
 }
 @default {
-{{data[1]}}
+{{data[2]}}
 }
 }
 

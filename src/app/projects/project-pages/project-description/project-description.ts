@@ -3,7 +3,7 @@ import { Component, input } from '@angular/core';
 import { RecursiveComponent } from "./recursive-component";
 
 interface specialCharHandlerResult {
-    returnListAdd: Array<string>;
+    returnListAdd: Array<any>;
     stack: Array<string>;
     initialized: boolean;
 }
@@ -88,13 +88,15 @@ export class ProjectDescription {
         let curContent = '';
 
         let stack: Array<string> = [];
-        let returnList: Array<Array<string>> = [];
+        let returnList: Array<Array<any>> = [];
+        let tagId = 0; //Generate a seperate unique id for each tag to help angular @for track it
 
         for (let i = 0; i < text.length; i++) {
             curChar = text.charAt(i);
 
             if (curChar === linkChar) {
-                returnList.push(["content", curContent]);
+                returnList.push([tagId, "content", curContent]);
+                tagId++;
                 curContent = '';
 
                 stack.push('(');
@@ -102,14 +104,17 @@ export class ProjectDescription {
 
                 // Skip over the string to the part where the link ended plus omit the ']' and '(' 
                 i = hrefObj.hrefEnd + 1;
-                returnList.push(['linkStart', hrefObj.href]);
+                returnList.push([tagId, 'linkStart', hrefObj.href]);
+                tagId++;
             }
             else if (specialChars.includes(curChar)) {
-                returnList.push(["content", curContent]);
+                returnList.push([tagId, "content", curContent]);
+                tagId++;
                 curContent = '';
 
                 let handlerResult: specialCharHandlerResult = this.specialCharHandler(specialCharsDesc, stack, curChar);
-                returnList.push(handlerResult.returnListAdd);
+                returnList.push([tagId, ...handlerResult.returnListAdd]);
+                tagId++;
                 stack = handlerResult.stack;
             }
             else {
@@ -117,59 +122,47 @@ export class ProjectDescription {
 
             }
         }
-        returnList.push(["content", curContent]);
+        returnList.push([tagId, "content", curContent]);
+        tagId++;
 
         if (stack.length != 0) {
             throw Error(`Unclosed text modification tag somewhere, Unclosed tag is ${stack[stack.length - 1]}`);
         }
         let tempList: Array<any> = [];
         returnList.forEach(section => {
-            if (section[0] == "content" && section[1] == "") {
-
-            } else {
+            if (!(section[1] == "content" && section[2] == "")) {
                 tempList.push(section);
             }
         })
         returnList = tempList;
         let tree: Array<any> = new Array(0);
-        tempList = this.endHandling(returnList, 0, tree, specialCharsDesc);
+        tempList = this.createTree(returnList, 0, tree, specialCharsDesc);
 
-        console.log("ReturnLst:")
-        console.log(tempList);
         return tempList;
 
     }
 
-    endHandling(returnList: Array<Array<string>>, startIndex: number, currentTree: Array<any>, specialCharsDesc: Array<specialCharsDesc>): Array<any> {
+    createTree(returnList: Array<Array<string>>, startIndex: number, currentTree: Array<any>, specialCharsDesc: Array<specialCharsDesc>): Array<any> {
         /*
-        Return [curIndex, curTree]
-        for idx in returnlist:
-            foreach in specialChars:
-                if match to startTag:
-                    currentTree.push(newShit)
-                    endHandling(returnList, i+1, newShit[1|2], specialCharsDesc)
-                else if match to endTag:
-                    return currentTree;
-                else if content:
-                    currentTree.push(whatever content)
+            
         */
 
         currentTree = currentTree ?? [];
 
         for (let i = startIndex; i < returnList.length; i++) {
             for (let j = 0; j < specialCharsDesc.length; j++) {
-                if (returnList[i][0] === specialCharsDesc[j].startTag) {
+                if (returnList[i][1] === specialCharsDesc[j].startTag) {
                     let pushable: Array<any> = structuredClone(returnList[i]);
-                    let childHandling = this.endHandling(returnList, i + 1, [], specialCharsDesc);
+                    let childHandling = this.createTree(returnList, i + 1, [], specialCharsDesc);
                     i = childHandling[0];
                     pushable.push(childHandling[1]);
                     currentTree.push(pushable);
                 }
-                else if (returnList[i][0] === specialCharsDesc[j].endTag) {
+                else if (returnList[i][1] === specialCharsDesc[j].endTag) {
                     return [i, currentTree];
                 }
             };
-            if (returnList[i][0] === "content") {
+            if (returnList[i][1] === "content") {
                 let pushable: Array<any> = structuredClone(returnList[i]);
                 currentTree.push(pushable);
             }
