@@ -17,6 +17,7 @@
             "carouselOptions": {
                 "items": 2
             },
+            "demoYouTubeId": "q5vWRL6UB_0",
             "technologiesUsed": [
                 "Node.js",
                 "React-Native",
