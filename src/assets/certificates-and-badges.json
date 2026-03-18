@@ -1,0 +1,45 @@
+{
+    "certifications": [
+        {
+            "name": "Partner: NDG Linux Essentials",
+            "provider": "Cisco Networking Academy",
+            "issue_date": "2024-12-11"
+        },
+        {
+            "name": "CCNA: Introduction to Networks",
+            "provider": "Cisco Networking Academy",
+            "issue_date": "2024-12-11"
+        },
+        {
+            "name": "CCNA: Switching, Routing, and Wireless Essentials",
+            "provider": "Cisco Networking Academy",
+            "issue_date": "2026-03-17"
+        }
+    ],
+    "badges": [
+        {
+            "name": "Metasploitable",
+            "provider": "TryHackMe",
+            "issue_date": "2026-01-29",
+            "description": "Contains the knowledge to use Metasploit"
+        },
+        {
+            "name": "System Sniffer",
+            "provider": "TryHackMe",
+            "issue_date": "2026-02-05",
+            "description": "Completed the File Path traversal room"
+        },
+        {
+            "name": "SQL Slayer",
+            "provider": "TryHackMe",
+            "issue_date": "2026-02-10",
+            "description": "Conquered Advanced SQL Injection"
+        },
+        {
+            "name": "Burp'ed",
+            "provider": "TryHackMe",
+            "issue_date": "2026-01-21",
+            "description": "Completing the Burp Suite module"
+        }
+    ]
+}

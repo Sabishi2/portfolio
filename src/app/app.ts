@@ -3,15 +3,15 @@ import { RouterOutlet, RouterModule } from '@angular/router';
 import { ProjectT } from './projects/project-type';
 import { ProjectPage } from './projects/project-pages/project-page';
 import { PICarouselHolderModule } from './projects/project-icons/pi-carousel/pi-carousel-holder-module';
-import projects_json from "../assets/projects.json"
-import { SetionNav } from './section-navigation/section-navigation';
+import projects_json from "../assets/projects.json";
+import { SectionNav } from "./section-navigation/section-navigation";
 import { NavButton } from './section-navigation/nav-button/nav-button';
 
 const projects: Array<ProjectT> = projects_json["projects"];
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, ProjectPage, RouterModule, PICarouselHolderModule, SetionNav, NavButton],
+  imports: [RouterOutlet, ProjectPage, RouterModule, PICarouselHolderModule, SectionNav, NavButton],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })

@@ -1,10 +1,10 @@
-import { Component, input } from '@angular/core';
+import { Component } from '@angular/core';
 @Component({
     selector: 'section-navigation',
     templateUrl: './section-navigation.html',
     styleUrl: './section-navigation.scss',
 })
 
-export class SetionNav {
+export class SectionNav {
 
 }
