@@ -47,6 +47,9 @@
     <div class="section" [class]="getSectionClass(2)">
       <h1 class="mb-1">Cerifications</h1>
       <p>Here are the cybersecurity certifications and badges that I've acquired.</p>
+      @for(cert of certificates; track cert.name) {
+      <certificate-template [certificate]="cert"></certificate-template>
+      }
     </div>
 
 

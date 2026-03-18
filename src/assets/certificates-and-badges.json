@@ -1,19 +1,22 @@
 {
-    "certifications": [
+    "certificates": [
         {
             "name": "Partner: NDG Linux Essentials",
             "provider": "Cisco Networking Academy",
-            "issue_date": "2024-12-11"
+            "issue_date": "2024-12-11",
+            "imageURL": "Cisco_Networking_Academy.svg"
         },
         {
             "name": "CCNA: Introduction to Networks",
             "provider": "Cisco Networking Academy",
-            "issue_date": "2024-12-11"
+            "issue_date": "2024-12-11",
+            "imageURL": "Cisco_Networking_Academy.svg"
         },
         {
             "name": "CCNA: Switching, Routing, and Wireless Essentials",
             "provider": "Cisco Networking Academy",
-            "issue_date": "2026-03-17"
+            "issue_date": "2026-03-17",
+            "imageURL": "Cisco_Networking_Academy.svg"
         }
     ],
     "badges": [

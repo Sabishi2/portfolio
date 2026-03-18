@@ -6,12 +6,16 @@ import { PICarouselHolderModule } from './projects/project-icons/pi-carousel/pi-
 import projects_json from "../assets/projects.json";
 import { SectionNav } from "./section-navigation/section-navigation";
 import { NavButton } from './section-navigation/nav-button/nav-button';
+import { Certificate } from './certificates/certificate';
+import { CertificateClass } from './certificates/certificate-type';
+import certificates_and_badges from "../assets/certificates-and-badges.json";
 
 const projects: Array<ProjectT> = projects_json["projects"];
+const certificates: CertificateClass[] = certificates_and_badges["certificates"];
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, ProjectPage, RouterModule, PICarouselHolderModule, SectionNav, NavButton],
+  imports: [RouterOutlet, ProjectPage, RouterModule, PICarouselHolderModule, SectionNav, NavButton, Certificate],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
@@ -39,5 +43,6 @@ export class App {
   currentSection = 0; // Default value of projects
   highlightedProject = 1;
   protected readonly title = signal('Portfolio-site');
+  certificates = certificates;
   projects = projects;
 }
